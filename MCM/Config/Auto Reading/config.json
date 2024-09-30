@@ -5,7 +5,11 @@
     "pluginRequirements": [],
     "cursorFillMode": "topToBottom",
     "content": [],
-    "customContent": {},
+    "customContent": {
+        "source": "SkyUI/Logo/Auto Reading.dds",
+        "x": 200,
+        "y": 0
+    },
     "pages": [
         {
             "pageDisplayName": "$General_Page",
