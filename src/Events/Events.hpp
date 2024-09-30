@@ -23,8 +23,12 @@ namespace event
 			case SKSE::MessagingInterface::kPostLoad:
 				break;
 			case SKSE::MessagingInterface::kPostLoadGame:
+				Settings::GetSingleton()->LoadSettings();
+				utility::SetSpell();
 				break;
 			case SKSE::MessagingInterface::kNewGame:
+				Settings::GetSingleton()->LoadSettings();
+				utility::SetSpell();
 				break;
 			case(SKSE::MessagingInterface::kInputLoaded):
 				KeyEventManager::Register();

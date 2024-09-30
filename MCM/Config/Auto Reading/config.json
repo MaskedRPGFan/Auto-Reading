@@ -164,7 +164,7 @@
                     "help": "$LoadSettingsonReloadMaintenance_Help",
                     "valueOptions": {
                         "sourceType": "ModSettingBool",
-                        "defaultValue": true
+                        "defaultValue": false
                     }
                 },
                 {

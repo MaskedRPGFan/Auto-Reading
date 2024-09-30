@@ -1,6 +1,7 @@
 #pragma once
 
 #include "AutoReading.hpp"
+#include "Utility.hpp"
 
 namespace papyrus
 {
@@ -62,31 +63,8 @@ namespace papyrus
 
 	static void SetSpell(RE::StaticFunctionTag*)
 	{
-		if(!RE::Main::GetSingleton()->gameActive)
-		{
-			logger::error("Game is not active.");
-			return;
-		}
 		Settings::LoadSettings();
-		const auto player_ref = RE::PlayerCharacter::GetSingleton();
-		const auto spell = Settings::GetSingleton()->spell->As<RE::SpellItem>();
-
-		if(spell)
-		{
-			logger::debug("Setting spell: {}.", spell->GetFullName());
-			if(Settings::has_spell && !player_ref->HasSpell(spell))
-			{
-				player_ref->AddSpell(spell);
-				logger::debug("Added spell: {}.", spell->GetFullName());
-			}
-			else if(!Settings::has_spell && player_ref->HasSpell(spell))
-			{
-				player_ref->RemoveSpell(spell);
-				logger::debug("Removed spell: {}.", spell->GetFullName());
-			}
-		}
-		else
-			logger::error("Spell is nullptr.");
+		utility::SetSpell();
 	}
 
 	/**

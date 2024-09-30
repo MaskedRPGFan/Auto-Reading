@@ -15,6 +15,7 @@ class Settings
 		}
 		static void LoadSettings() noexcept;
 		static void SaveSettings(bool stats_only = false) noexcept;
+
 		inline static bool read_normal_books = true;
 		inline static bool read_skill_books = true;
 		inline static bool read_spell_books = true;

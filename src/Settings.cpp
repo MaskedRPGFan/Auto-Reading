@@ -2,6 +2,11 @@
 
 void Settings::LoadSettings() noexcept
 {
+	LoadSettingsFromFile(global_ini);
+
+	if(std::filesystem::exists(user_ini))
+		LoadSettingsFromFile(user_ini);
+
 	if(debug_mode)
 	{
 		spdlog::set_level(spdlog::level::debug);
@@ -9,11 +14,6 @@ void Settings::LoadSettings() noexcept
 	}
 
 	logger::debug("Loading settings...");
-
-	LoadSettingsFromFile(global_ini);
-
-	if(std::filesystem::exists(user_ini))
-		LoadSettingsFromFile(user_ini);
 
 	logger::debug("Read books that does not have skill or spell: {}.", read_normal_books);
 	logger::debug("Read books that improves skills: {}.", read_skill_books);
@@ -26,12 +26,12 @@ void Settings::LoadSettings() noexcept
 	logger::debug("Skill books: {}.", skill_books_counter);
 	logger::debug("Spell books: {}.", spell_books_counter);
 
-	logger::info("Settings loaded!");
+	logger::debug("Settings loaded!");
 }
 
 void Settings::SaveSettings(bool stats_only) noexcept
 {
-	logger::info("Saving settings...");
+	logger::debug("Saving settings...");
 
 	CSimpleIniA ini;
 	ini.SetUnicode();
@@ -67,7 +67,7 @@ void Settings::SaveSettings(bool stats_only) noexcept
 	const auto result = ini.SaveFile(user_ini);
 
 	if(result == SI_OK)
-		logger::info("Settings saved!");
+		logger::debug("Settings saved!");
 	else
 		logger::error("Failed to save settings!");
 }
