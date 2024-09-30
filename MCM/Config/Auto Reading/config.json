@@ -1,0 +1,204 @@
+{
+    "modName": "Auto Reading",
+    "displayName": "$AutoReading",
+    "minMcmVersion": 9,
+    "pluginRequirements": [],
+    "cursorFillMode": "topToBottom",
+    "content": [],
+    "customContent": {},
+    "pages": [
+        {
+            "pageDisplayName": "$General_Page",
+            "cursorFillMode": "topToBottom",
+            "content": [
+                {
+                    "type": "header",
+                    "text": "$General_Header"
+                },
+                {
+                    "id": "bNormalBook:General",
+                    "type": "toggle",
+                    "text": "$NormalBook",
+                    "help": "$NormalBookGeneral_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool",
+                        "defaultValue": true
+                    }
+                },
+                {
+                    "id": "bSkillBook:General",
+                    "type": "toggle",
+                    "text": "$SkillBook",
+                    "help": "$SkillBookGeneral_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool",
+                        "defaultValue": true
+                    }
+                },
+                {
+                    "id": "bSpellBook:General",
+                    "type": "toggle",
+                    "text": "$SpellBook",
+                    "help": "$SpellBookGeneral_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool",
+                        "defaultValue": true
+                    }
+                },
+                {
+                    "id": "bEatSpellBook:General",
+                    "type": "toggle",
+                    "text": "$EatSpellBook",
+                    "help": "$EatSpellBookGeneral_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool",
+                        "defaultValue": true
+                    }
+                },
+                {
+                    "id": "bHasSpell:General",
+                    "type": "toggle",
+                    "text": "$HasSpell",
+                    "help": "$HasSpellGeneral_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool",
+                        "defaultValue": true
+                    }
+                },
+                {
+                    "id": "bNotifications:General",
+                    "type": "toggle",
+                    "text": "$Notifications",
+                    "help": "$NotificationsGeneral_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool",
+                        "defaultValue": true
+                    }
+                },
+                {
+                    "id": "iHotkey:General",
+                    "type": "keymap",
+                    "text": "$Hotkey",
+                    "help": "$HotkeyGeneral_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingInt",
+                        "defaultValue": -1
+                    },
+                    "ignoreConflicts": false
+                },
+                {
+                    "type": "header",
+                    "text": "$Stats_Header",
+                    "position": 1
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "$Maintenance_Page",
+            "cursorFillMode": "topToBottom",
+            "content": [
+                {
+                    "type": "header",
+                    "text": "$AutoloadSettings_Header"
+                },
+                {
+                    "id": "bEnabled:Maintenance",
+                    "type": "toggle",
+                    "text": "$Enabled",
+                    "help": "$EnabledMaintenance_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool",
+                        "defaultValue": true
+                    }
+                },
+                {
+                    "id": "iLoadingDelay:Maintenance",
+                    "type": "slider",
+                    "text": "$LoadingDelay",
+                    "help": "$LoadingDelayMaintenance_Help",
+                    "valueOptions": {
+                        "min": 0,
+                        "max": 600,
+                        "step": 1,
+                        "defaultValue": 0,
+                        "sourceType": "ModSettingInt",
+                        "formatString": "{0}"
+                    }
+                },
+                {
+                    "id": "sLoadSettings:Maintenance",
+                    "type": "text",
+                    "text": "$LoadSettings",
+                    "help": "$LoadSettingsMaintenance_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString",
+                        "defaultValue": ""
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "function": "Load"
+                    }
+                },
+                {
+                    "id": "sResetSettings:Maintenance",
+                    "type": "text",
+                    "text": "$ResetSettings",
+                    "help": "$ResetSettingsMaintenance_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString",
+                        "defaultValue": ""
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "function": "Default"
+                    }
+                },
+                {
+                    "id": "bLoadSettingsonReload:Maintenance",
+                    "type": "toggle",
+                    "text": "$LoadSettingsonReload",
+                    "help": "$LoadSettingsonReloadMaintenance_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool",
+                        "defaultValue": true
+                    }
+                },
+                {
+                    "id": "bVerbose:Maintenance",
+                    "type": "toggle",
+                    "text": "$Verbose",
+                    "help": "$VerboseMaintenance_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool",
+                        "defaultValue": false
+                    }
+                },
+                {
+                    "type": "header",
+                    "text": "$SKSEDLL_Header",
+                    "position": 1
+                },
+                {
+                    "id": "bDebugMode:Maintenance",
+                    "type": "toggle",
+                    "text": "$DebugMode",
+                    "help": "$DebugModeMaintenance_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool",
+                        "defaultValue": false
+                    }
+                },
+                {
+                    "id": "sAutoReading:SKSEDLL",
+                    "type": "text",
+                    "text": "$AutoReading",
+                    "help": "$AutoReadingSKSEDLL_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingString",
+                        "defaultValue": ""
+                    }
+                }
+            ]
+        }
+    ]
+}
