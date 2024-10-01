@@ -1,9 +1,9 @@
 
 [![](https://i.postimg.cc/Nj2mWwpw/Ko-fi-small.png)](https://ko-fi.com/maskedrpgfan)   [![](https://i.postimg.cc/MKTymBBH/Buy-Me-ACoffee-small.png)](https://buymeacoffee.com/maskedrpgfan)   [![](https://i.postimg.cc/28Knc5dw/Patreon-small.png)](https://www.patreon.com/maskedrpgfan)
 
+<p align="center"><img src="https://github.com/user-attachments/assets/9211dd7b-6751-410b-b9e2-4c4bdb31f57a"  width="200" height="200" /></p>
 
 # Auto Reading
-
 
 ## Introduction
 
@@ -62,9 +62,9 @@ I tested plugin as much as I could and should be no problems, but if something i
 
 ## FAQ
 
-### I do not need MCM, can I use only plugin?
+### I do not need MCM, can I use only dll?
 
-Yes. You can use just 3 files: dll, pdb and ini. Plugin, scripts and other files are just for MCM. Keep in mind that without MCM you will need to reload save to apply settings from ini file.
+Yes. You can use just 3 files: dll, pdb and ini. Plugin, scripts and other files are just for MCM. Keep in mind that without MCM you will need to reload save to apply settings from ini file and you will lose ability to use spell.
 
 ## Credits
 
@@ -76,4 +76,4 @@ Yes. You can use just 3 files: dll, pdb and ini. Plugin, scripts and other files
 
 ## Permissions
 
-I encourage you to learn from the [source files](https://github.com/MaskedRPGFan/Auto-Reading). If you have any questions or for any other matters, please feel free to contact me.
+This mod is open-source. I encourage you to learn from the [source files](https://github.com/MaskedRPGFan/Auto-Reading). If you want to add a new feature or change something, please submit a pull request on GitHub. If you have any questions or for any other matters, please feel free to contact me.
