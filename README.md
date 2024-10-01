@@ -22,6 +22,7 @@ Automatically read all books from player inventory using hotkey or spell. Lets y
 * 🔗[Address Library for SKSE Plugins](https://www.nexusmods.com/skyrimspecialedition/mods/32444)
 * 🔗[SkyUI](https://www.nexusmods.com/skyrimspecialedition/mods/12604)
 * 🔗[MCM Helper](https://www.nexusmods.com/skyrimspecialedition/mods/53000)
+* 🔗[Latest Microsoft Visual C++ Redistributable package](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 ## Installation
 
