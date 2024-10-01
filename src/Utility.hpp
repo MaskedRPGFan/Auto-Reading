@@ -48,6 +48,12 @@ namespace utility
 			return;
 		}
 
+		if(!Settings::GetSingleton()->spell)
+		{
+			logger::warn("Spell is nullptr.");
+			return;
+		}
+
 		const auto player_ref = RE::PlayerCharacter::GetSingleton();
 		const auto spell = Settings::GetSingleton()->spell->As<RE::SpellItem>();
 

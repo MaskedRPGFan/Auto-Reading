@@ -28,7 +28,7 @@ class Settings
 
 		inline static int hotkey = -1;
 
-		inline static bool debug_mode = true;
+		inline static bool debug_mode = false;
 
 		inline static unsigned int normal_books_counter = 0;
 		inline static unsigned int skill_books_counter = 0;
