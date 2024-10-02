@@ -1,6 +1,5 @@
 #include "KeyEventManager.hpp"
 #include "AutoReading.hpp"
-#include "Utility.hpp"
 
 namespace event
 {
@@ -19,6 +18,10 @@ namespace event
 		{
 			if(event->GetEventType() == RE::INPUT_EVENT_TYPE::kButton)
 			{
+
+				if(const auto ui = RE::UI::GetSingleton(); Settings::hotkey_restricted && ui && !ui->IsMenuOpen("InventoryMenu"))
+					return RE::BSEventNotifyControl::kContinue;
+
 				const auto* button_event = event->AsButtonEvent();
 				const int key = static_cast<int>(button_event->GetIDCode());
 
@@ -27,7 +30,6 @@ namespace event
 					if(key > 0 && key == Settings::hotkey)
 					{
 						auto_reading::Read();
-						utility::UpdateItemList();
 					}
 				}
 			}

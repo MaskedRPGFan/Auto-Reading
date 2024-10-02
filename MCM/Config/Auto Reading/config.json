@@ -60,10 +60,10 @@
                     }
                 },
                 {
-                    "id": "bHasSpell:General",
+                    "id": "bAddSpell:General",
                     "type": "toggle",
-                    "text": "$HasSpell",
-                    "help": "$HasSpellGeneral_Help",
+                    "text": "$AddSpell",
+                    "help": "$AddSpellGeneral_Help",
                     "valueOptions": {
                         "sourceType": "ModSettingBool",
                         "defaultValue": true
@@ -89,6 +89,16 @@
                         "defaultValue": -1
                     },
                     "ignoreConflicts": false
+                },
+                {
+                    "id": "bHotkeyRestricted:General",
+                    "type": "toggle",
+                    "text": "$HotkeyRestricted",
+                    "help": "$HotkeyRestrictedGeneral_Help",
+                    "valueOptions": {
+                        "sourceType": "ModSettingBool",
+                        "defaultValue": true
+                    }
                 },
                 {
                     "type": "header",

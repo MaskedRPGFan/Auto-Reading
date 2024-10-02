@@ -44,9 +44,10 @@ Using MCM/ini settings ⚒️, you can change these options:
 * **Skill  Book**: if enabled, will make **Auto Reading**  ability read all books that improve skills. **Enabled** by default.
 * **Spell Book**: if enabled, will make **Auto Reading**  ability read all books that teach spells. **Enabled** by default.
 * **Eat Spell Book**: if enabled, will make **Auto Reading**  ability **eat**  spell books after reading, removing them from the player's inventory. **Enabled** by default.
-* **Has Spell**: if enabled, will add **Auto Reading**  spell to player spellbook. **Enabled** by default.
+* **Add Spell**: if enabled, will add **Auto Reading**  spell to player spellbook. **Enabled** by default.
 * **Notifications**: if enabled, displays notifications for each book that is auto read. It also displays information about eating a spell book. **Enabled** by default.
 * **Hotkey**: if set, will allow you to use the **Auto Reading**  ability when you press the assigned hotkey. **Not set** by default.
+* **Hotkey Restriction**: if set, will not allow you to use the **Auto Reading** hotkey outside player inventory. **Enabled** by default.
 
 ## Troubleshooting
 

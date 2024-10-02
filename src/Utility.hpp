@@ -4,27 +4,9 @@ namespace utility
 {
 	inline void UpdateItemList()
 	{
-		const auto UI = RE::UI::GetSingleton();
-
-		if(!UI)
-			return;
-
-		if(UI->IsMenuOpen("InventoryMenu"))
+		if(const auto ui = RE::UI::GetSingleton(); ui && ui->IsMenuOpen("InventoryMenu"))
 		{
-			UI->GetMenu<RE::InventoryMenu>()->GetRuntimeData().itemList->Update();
-			return;
-		}
-
-		if(UI->IsMenuOpen("ContainerMenu"))
-		{
-			UI->GetMenu<RE::ContainerMenu>()->GetRuntimeData().itemList->Update();
-			return;
-		}
-
-		if(UI->IsMenuOpen("BarterMenu"))
-		{
-			UI->GetMenu<RE::BarterMenu>()->GetRuntimeData().itemList->Update();
-			return;
+			ui->GetMenu<RE::InventoryMenu>()->GetRuntimeData().itemList->Update();
 		}
 	}
 
@@ -60,12 +42,12 @@ namespace utility
 		if(spell)
 		{
 			logger::debug("Setting spell: {}.", spell->GetFullName());
-			if(Settings::has_spell && !player_ref->HasSpell(spell))
+			if(Settings::add_spell && !player_ref->HasSpell(spell))
 			{
 				player_ref->AddSpell(spell);
 				logger::debug("Added spell: {}.", spell->GetFullName());
 			}
-			else if(!Settings::has_spell && player_ref->HasSpell(spell))
+			else if(!Settings::add_spell && player_ref->HasSpell(spell))
 			{
 				player_ref->RemoveSpell(spell);
 				logger::debug("Removed spell: {}.", spell->GetFullName());

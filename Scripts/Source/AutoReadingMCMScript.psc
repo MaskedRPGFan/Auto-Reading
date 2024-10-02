@@ -47,7 +47,7 @@ EndEvent
 ; Called when setting changed to different value.
 Event OnSettingChange(String a_ID)
     parent.OnSettingChange(a_ID)
-    If a_ID == "bHasSpell:General"
+    If a_ID == "bAddSpell:General"
         AutoReading.SetSpell()
     EndIf
 EndEvent
@@ -57,9 +57,10 @@ Function Default()
     SetModSettingBool("bSkillBook:General", True)
     SetModSettingBool("bSpellBook:General", True)
     SetModSettingBool("bEatSpellBook:General", True)
-    SetModSettingBool("bHasSpell:General", True)
+    SetModSettingBool("bAddSpell:General", True)
     SetModSettingBool("bNotifications:General", True)
     SetModSettingInt("iHotkey:General", -1)
+    SetModSettingBool("bHotkeyRestricted:General", True)
     SetModSettingBool("bEnabled:Maintenance", True)
     SetModSettingInt("iLoadingDelay:Maintenance", 0)
     SetModSettingBool("bLoadSettingsonReload:Maintenance", False)

@@ -22,11 +22,12 @@ class Settings
 
 		inline static bool eat_spell_book = true;
 
-		inline static bool has_spell = true;
+		inline static bool add_spell = true;
 
 		inline static bool notifications = true;
 
 		inline static int hotkey = -1;
+		inline static bool hotkey_restricted = false;
 
 		inline static bool debug_mode = false;
 

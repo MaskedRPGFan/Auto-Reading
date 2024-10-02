@@ -1,5 +1,6 @@
 #pragma once
-#include "Settings.hpp"
+#include "Settings/Settings.hpp"
+#include "Utility.hpp"
 
 namespace auto_reading
 {
@@ -12,6 +13,9 @@ namespace auto_reading
 	{
 		const auto player_ref = RE::PlayerCharacter::GetSingleton();
 		auto books = player_ref->GetInventory(IsBook);
+
+		std::set<RE::TESBoundObject*> read_books;
+		std::set<RE::TESBoundObject*> books_to_eat;
 
 		for(auto& [object, snd] : books)
 		{
@@ -48,7 +52,7 @@ namespace auto_reading
 					Settings::spell_books_counter++;
 					if(Settings::eat_spell_book)
 					{
-						player_ref->RemoveItem(object, 1, RE::ITEM_REMOVE_REASON::kRemove, nullptr, nullptr);
+						books_to_eat.insert(book);
 						logger::debug("Eating spell book {}", name);
 						if(Settings::notifications)
 							RE::DebugNotification(std::format("Eating spell book: {}", name).c_str());
@@ -56,6 +60,13 @@ namespace auto_reading
 				}
 			}
 		}
+
+		utility::UpdateItemList();
+
+		for(auto& book : books_to_eat)
+			player_ref->RemoveItem(book, 1, RE::ITEM_REMOVE_REASON::kRemove, nullptr, nullptr);
+
+		utility::UpdateItemList();
 
 		Settings::SaveSettings(true);
 	}

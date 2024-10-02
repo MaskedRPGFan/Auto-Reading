@@ -19,9 +19,10 @@ void Settings::LoadSettings() noexcept
 	logger::debug("Read books that improves skills: {}.", read_skill_books);
 	logger::debug("Read books that teaches a spell: {}.", read_spell_books);
 	logger::debug("Eat spell books: {}.", eat_spell_book);
-	logger::debug("Has spell: {}.", has_spell);
+	logger::debug("Add spell: {}.", add_spell);
 	logger::debug("Show notifications when a spell book or skill is read: {}.", notifications);
 	logger::debug("Hotkey: {}.", hotkey);
+	logger::debug("Hotkey restricted: {}.", hotkey_restricted);
 	logger::debug("Normal books: {}.", normal_books_counter);
 	logger::debug("Skill books: {}.", skill_books_counter);
 	logger::debug("Spell books: {}.", spell_books_counter);
@@ -48,14 +49,12 @@ void Settings::SaveSettings(bool stats_only) noexcept
 		ini.SetLongValue("General", "bNormalBook", read_normal_books);
 		ini.SetLongValue("General", "bSkillBook", read_skill_books);
 		ini.SetLongValue("General", "bSpellBook", read_spell_books);
-
 		ini.SetLongValue("General", "bEatSpellBook", eat_spell_book);
-
-		ini.SetLongValue("General", "bHasSpell", has_spell);
-
+		ini.SetLongValue("General", "bAddSpell", add_spell);
 		ini.SetLongValue("General", "bNotifications", notifications);
 
 		ini.SetLongValue("General", "iHotkey", hotkey);
+		ini.SetLongValue("General", "bHotkeyRestricted", hotkey_restricted);
 
 		ini.SetLongValue("General", "bDebugMode", debug_mode);
 	}
@@ -87,14 +86,12 @@ void Settings::LoadSettingsFromFile(const char* ini_path)
 	read_normal_books = ini.GetLongValue("General", "bNormalBook", read_normal_books);
 	read_skill_books = ini.GetLongValue("General", "bSkillBook", read_skill_books);
 	read_spell_books = ini.GetLongValue("General", "bSpellBook", read_spell_books);
-
 	eat_spell_book = ini.GetLongValue("General", "bEatSpellBook", eat_spell_book);
-
-	has_spell = ini.GetLongValue("General", "bHasSpell", has_spell);
-
+	add_spell = ini.GetLongValue("General", "bHasSpell", add_spell);
 	notifications = ini.GetLongValue("General", "bNotifications", notifications);
 
 	hotkey = ini.GetLongValue("General", "iHotkey", hotkey);
+	hotkey_restricted = ini.GetLongValue("General", "bHotkeyRestricted", hotkey_restricted);
 
 	debug_mode = ini.GetLongValue("Maintenance", "bDebugMode", debug_mode);
 

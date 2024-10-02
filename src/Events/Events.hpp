@@ -2,7 +2,7 @@
 
 #include "Constants.hpp"
 #include "KeyEventManager.hpp"
-#include "Settings.hpp"
+#include "Settings/Settings.hpp"
 #include "SpellCastEventManager.hpp"
 #include "Utility.hpp"
 
