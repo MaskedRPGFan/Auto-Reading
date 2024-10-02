@@ -7,12 +7,12 @@
 
 ## Introduction
 
-Automatically read all books from player inventory using hotkey or spell. Lets you decide what type of book you will read.
+SKSE plugin that automatically read all books from the player's inventory with a hotkey or spell. Lets you decide what type of book you will read.
 
 ## Features
 
-* ➡️ Auto reading of all books from player inventory using hotkey.
-* ➡️ Auto reading of all books from player inventory using spell.
+* ➡️ Automatically read all books from the player's inventory with a hotkey.
+* ➡️ Automatically read all books from the player's inventory with a spell.
 * ➡️ Ability to choose the type of book to automatically read: normal book, skill book or spell book.
 * ➡️ Ability to eat spell tomes after read.
 * ➡️ Track the number of auto-read books.
@@ -49,9 +49,17 @@ Using MCM/ini settings ⚒️, you can change these options:
 * **Hotkey**: if set, will allow you to use the **Auto Reading**  ability when you press the assigned hotkey. **Not set** by default.
 * **Hotkey Restriction**: if set, will not allow you to use the **Auto Reading** hotkey outside player inventory. **Enabled** by default.
 
+## Compatibility
+
+Created with CommonLibSSE-NG for Skyrim SE, AE, and VR.
+
+Current state of compatibility with other mods:
+* ✅ [Missives](https://www.nexusmods.com/skyrimspecialedition/mods/17576)
+* ✅ [Experience](https://www.nexusmods.com/skyrimspecialedition/mods/17751)
+
 ## Troubleshooting
 
-I tested plugin as much as I could and should be no problems, but if something is not working correctly, please use **[Bugs](https://www.nexusmods.com/skyrimspecialedition/mods/130553?tab=bugs)**  tab and create bug report ☠️:
+I tested mod as much as I could and should be no problems, but if something is not working correctly, please use **[Bugs](https://www.nexusmods.com/skyrimspecialedition/mods/130553?tab=bugs)**  tab and create bug report ☠️:
 
 * ✳️ Describe bug.
 * ✳️ List steps to reproduce it.
